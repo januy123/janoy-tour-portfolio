@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebu Educational Tour Portfolio</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="">
+</div>
+
+
+<!-- LIVE GALAXY BACKGROUND -->
+<div class="galaxy"></div>
+<canvas id="stars"></canvas>
+<div class="cursor-glow" id="cursor"></div>
+
+<nav class="navbar">
+    <h2 class="logo"> JanMarc</h2>
+    <ul>
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
+        <li><a href="#journal" class="nav-link">Journal</a></li>
+        <li><a href="#certs" class="nav-link">Certificates</a></li>
+        <li><a href="#reflection" class="nav-link">Reflection</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero" class="section hero">
+    <div class="hero-left">
+    <h1 class="name-wave">
+        Hi, I'm <span>JanMarc</span>
+    </h1>
+
+    <h3 class="typewriter">
+        <span id="typed-text">BSIT - Holy Cross of Davao College</span>
+    </h3>
+
+    <p class="hero-desc">
+        Cebu Educational Tour Portfolio: A journey of discovery, learning, and personal growth,
+         capturing memorable experiences, valuable lessons, and the moments that shaped me as a student.
+    </p>
+
+    <!-- SOCIAL ICONS -->
+    <div class="socials">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+</div>
+
+  </div>
+    <div class="profile-wrapper">
+     <img src="images/pic.jpg" alt="My Photo" class="profile-pic">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade about-section">
+    <h2 class="about-title">About Me</h2>
+
+    <p class="about-text">
+        I am a Bachelor of Science in Information Technology student who is continuously
+        exploring and learning in the field of technology. I enjoy discovering how systems
+        work, how problems are solved through programming, and how technology is applied
+        in real-world environments.
+        <br><br>
+        Outside academics, I spend my time playing basketball, which helps me develop
+        teamwork, discipline, and focus. I also enjoy playing online games, where I enhance
+        my strategic thinking, decision-making skills, and patience.
+        <br><br>
+        Traveling is another passion of mine because it allows me to experience different
+        cultures, environments, and perspectives. I also love listening to music, which
+        helps me relax, stay motivated, and maintain balance during stressful times.
+        <br><br>
+        As a student, I am eager to continuously learn more about technology, improve my
+        skills, and grow both personally and professionally. Experiences like the Cebu
+        Educational Tour have inspired me to aim higher and prepare myself for future
+        opportunities in the IT industry.
+    </p>
+
+    <!-- OPTIONAL STATS / HIGHLIGHTS -->
+    <div class="about-highlights">
+        <div class="highlight-card">🏀 Basketball</div>
+        <div class="highlight-card">🎮 Online Games</div>
+        <div class="highlight-card">✈️ Travel</div>
+        <div class="highlight-card">🎧 Music</div>
+        <div class="highlight-card">💻 Technology</div>
+    </div>
+</section>
+
+
+<!-- ITINERARY -->
+<section id="itinerary" class="section fade">
+    <h2 class="about-title" style="text-align: center;">Tour Itinerary</h2>
+    <p class="itinerary-desc" style="text-align: center; max-width: 700px; margin: 10px auto 30px; color: #ffffff;">
+        An exciting four-day tour exploring the world of technology, discovering innovative solutions, 
+        and witnessing how cutting-edge systems operate in real life.
+    </p>
+
+    <div class="itinerary-day" id="day1">
+        <h3 class="day-title">Day 1 – Nov 19 WED</h3>
+
+        <div class="day-gallery">
+            <button class="prev" onclick="changeSlide('day1', -1)">&#10094;</button>
+            <img src="images/d1-1.jpg" class="day-slide" alt="Day 1 Photo">
+            <img src="images/d1-2.jpg" class="day-slide" alt="Day 1 Photo">
+            <img src="images/d1-3.jpg" class="day-slide" alt="Day 1 Photo">
+            <img src="images/d1-4.jpg" class="day-slide" alt="Day 1 Photo">
+            <button class="next" onclick="changeSlide('day1', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="itinerary-day" id="day2">
+        <h3 class="day-title">Day 2 – Nov 20 THU</h3>
+
+        <div class="day-gallery">
+            <button class="prev" onclick="changeSlide('day2', -1)">&#10094;</button>
+            <img src="images/d2-1.jpg" class="day-slide" alt="Day 2 Photo">
+            <img src="images/d2-2.jpg" class="day-slide" alt="Day 2 Photo">
+            <img src="images/d2-3.jpg" class="day-slide" alt="Day 2 Photo">
+            <img src="images/d2-4.jpg" class="day-slide" alt="Day 2 Photo">
+            <button class="next" onclick="changeSlide('day2', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="itinerary-day" id="day3">
+        <h3 class="day-title">Day 3 – Nov 21 FRI</h3>
+
+        <div class="day-gallery">
+            <button class="prev" onclick="changeSlide('day3', -1)">&#10094;</button>
+            <img src="images/d3-1.jpg" class="day-slide" alt="Day 3 Photo">
+            <img src="images/d3-2.jpg" class="day-slide" alt="Day 3 Photo">
+            <img src="images/d3-3.jpg" class="day-slide" alt="Day 3 Photo">
+            <img src="images/d3-4.jpg" class="day-slide" alt="Day 3 Photo">
+            <button class="next" onclick="changeSlide('day3', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="itinerary-day" id="day4">
+        <h3 class="day-title">Day 4 – Nov 22 SAT</h3>
+
+        <div class="day-gallery">
+            <button class="prev" onclick="changeSlide('day4', -1)">&#10094;</button>
+            <img src="images/d4-1.jpg" class="day-slide" alt="Day 4 Photo">
+            <img src="images/d4-2.jpg" class="day-slide" alt="Day 4 Photo">
+            <img src="images/d4-3.jpg" class="day-slide" alt="Day 4 Photo">
+            <img src="images/d4-4.jpg" class="day-slide" alt="Day 4 Photo">
+            <button class="next" onclick="changeSlide('day4', 1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- JOURNAL -->
+<section id="journal" class="section fade">
+    <h2 class="about-title" style="text-align: center;">Daily Journal</h2>
+    <p class="journal-desc" style="text-align: center; max-width: 700px; margin: 10px auto 30px; color: #ffffff;">
+        Comprehensive insights and key learnings gained from each company visited during the educational industry tour.
+    </p>
+
+    <div class="journal-container">
+        <div class="journal-card" onclick="openJournalModal('images/comp-1.jpg', 'Worldtech Information Solutions, Inc.', 
+            `<ul>
+                <li><strong>Observations:</strong> Professional IT consulting and cybersecurity environment, updated technologies, knowledgeable trainers.</li>
+                <li><strong>Learnings:</strong> Cybersecurity is vital, certifications help career growth, training centers strengthen IT skills.</li>
+            </ul>` )">
+            <img src="images/comp-1.jpg" alt="Company 1">
+            <h3>Worldtech Info Solutions</h3>
+        </div>
+
+        <div class="journal-card" onclick="openJournalModal('images/comp-2.jpg', 'Rivan IT Cebu', 
+            `<ul>
+                <li><strong>Observations:</strong> Innovative IT solutions, hands-on networking experience, collaborative environment.</li>
+                <li><strong>Learnings:</strong> Networking and IT support are essential, teamwork improves efficiency, practical exposure is invaluable.</li>
+            </ul>` )">
+            <img src="images/comp-2.jpg" alt="Company 2">
+            <h3>Rivan IT Cebu</h3>
+        </div>
+
+        <div class="journal-card" onclick="openJournalModal('images/comp-3.jpg', 'CodeChum', 
+            `<ul>
+                <li><strong>Observations:</strong> Software development workflow, agile methodology, collaborative coding.</li>
+                <li><strong>Learnings:</strong> Agile improves project management, hands-on coding experience is crucial, teamwork enhances quality.</li>
+            </ul>` )">
+            <img src="images/comp-3.jpg" alt="Company 3">
+            <h3>CodeChum</h3>
+        </div>
+
+        <div class="journal-card" onclick="openJournalModal('images/comp-4.jpg', 'Mata Technologies', 
+            `<ul>
+                <li><strong>Observations:</strong> Cutting-edge IT training, supportive instructors, hands-on lab experience.</li>
+                <li><strong>Learnings:</strong> Lab work enhances understanding, IT training strengthens career readiness, continuous learning is key.</li>
+            </ul>` )">
+            <img src="images/comp-4.jpg" alt="Company 4">
+            <h3>Mata Technologies</h3>
+        </div>
+
+        <div class="journal-card" onclick="openJournalModal('images/comp-5.jpg', 'T.A.R.S.I.E.R 117', 
+            `<ul>
+                <li><strong>Observations:</strong> The innovative approach to problem-solving was inspiring and showed me how creativity drives technology.</li>
+                <li><strong>Learnings:</strong> An exploration of advancing technological solutions, innovation-driven startup cultures, effective project management practices, and emerging technologies applied in real-world settings.</li>
+            </ul>` )">
+            <img src="images/comp-5.jpg" alt="Company 4">
+            <h3>T.A.R.S.I.E.R 117</h3>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL -->
+<div id="journalModal" class="journal-modal">
+    <span class="close" onclick="closeJournalModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modal-img" src="" alt="Company">
+        <h3 id="modal-title"></h3>
+        <div id="modal-content"></div>
+    </div>
+</div>
+
+
+<!-- CERTIFICATES -->
+<section id="certs" class="section fade">
+    <h2 class="about-title" style="text-align: center;">Certificate</h2>
+    <p class="cert-desc" style="text-align: center; max-width: 700px; margin: 10px auto 30px; color: #ffffff;">
+        Professional certifications and achievements earned through committed learning and industry-standard programs.
+    </p>
+    <div class="cert-grid">
+        <img src="images/cert1.jpg" alt="Certificate 1">
+        <!-- Add more certificates here if needed -->
+    </div>
+</section>
+
+
+<!-- REFLECTION -->
+<section id="reflection" class="section fade">
+    <div class="reflection-container">
+        <h2 class="about-title" style="text-align: center;">Overall Reflection</h2>
+
+        <p class="reflection-text fade-item"><strong>What did I learn overall?</strong><br>
+        I gained valuable insights into how IT concepts are applied in real-world industry settings.</p>
+
+        <p class="reflection-text fade-item"><strong>How did it help my course?</strong><br>
+        It bridged the gap between classroom lessons and practical, hands-on experience.</p>
+
+        <p class="reflection-text fade-item"><strong>How did I grow as a student?</strong><br>
+        I developed greater confidence, motivation, and a stronger focus on my goals.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Jan Marc • Educational Tour Portfolio</p>
+</footer>
+
+
+<!-- LINK JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
